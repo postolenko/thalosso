@@ -322,7 +322,7 @@
 	/*-- Section 1 --*/
 
 	.promo {
-	    background-position: center;
+	    background-attachment: none;
 	}
 
 	.promo_descript {

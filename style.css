@@ -718,8 +718,9 @@ textarea:focus {
     -webkit-align-items: center;
     min-height: 100vh;
     background-image: url(img/promo_bg.jpg);
+    background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: fixed;
+    background-position: center;
     background-size: cover;
     position: relative;
 }
