@@ -1,3 +1,11 @@
+function getAnimation() {
+  $(".animate").each(function() {
+    if( $(this).offset().top <= $(document).scrollTop() + $(window).height() ) {
+      $(this).addClass("active");
+    }
+  });
+}
+
 function getHeaderParams() {
   if($(document).scrollTop() > 1) {
     $(".header").addClass("fixed");
@@ -22,18 +30,21 @@ $(window).load(function() {
 $(window).resize(function() {
 
     getHeaderParams();
+    getAnimation();
 
 });
 
 $(document).scroll(function() {
 
     getHeaderParams();
+    getAnimation();
 
 });
 
 $(document).ready(function() {
 
     getHeaderParams();
+    getAnimation();
 
     if( $(".slider").length > 0 ) {
 
