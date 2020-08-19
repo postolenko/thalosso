@@ -321,6 +321,10 @@
 
 	/*-- Section 1 --*/
 
+	.promo {
+	    background-position: center;
+	}
+
 	.promo_descript {
 	    margin-top: 61px;
 	}
