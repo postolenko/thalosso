@@ -10,7 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">	
 	<title>Thalasso - SPA набор для домашнего «селфи-обертывания»</title>
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<!-- 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
 </head>
 
 <body>
@@ -19,8 +19,8 @@
 
 	<!-- Header -->
 		
-	<header class="header">
-		<div class="row">
+	<header class="header" id="header">
+		<div class="row full_height">
 			<div class="header_site">			
 				<div class="left">
 					<a href="#" class="logo">
@@ -29,27 +29,36 @@
 				</div>
 				<div class="right">
 					<div>
-						<div class="main_nav_wrapp" id="resp_nav">
-							<ul class="main_nav">
-								<li><a href="#">Состав набора</a></li>
-								<li><a href="#">Преимущества</a></li>
-								<li><a href="#">Отзывы</a></li>
-								<li><a href="#">Стоимость</a></li>
-							</ul>
-						</div>
+						<ul class="main_nav">
+							<li><a href="#">Состав набора</a></li>
+							<li><a href="#">Преимущества</a></li>
+							<li><a href="#">Отзывы</a></li>
+							<li><a href="#">Стоимость</a></li>
+						</ul>
 					</div>
-					<div>
+					<div class="novisible_800">
 						<a href="#" class="transparent_pill">Заказать набор</a>
 					</div>
 				</div>
 			</div>
-					<!-- 			<button class="respmenubtn">
-						<span></span>
-						<span></span>
-						<span></span>
-					</button> -->
-		</div>								
+			<div class="resp_header_footer">
+				<div>					
+					<p>ООО «Мир Торговли» 170034, г. Тверь, пр-т Чайковского, д. 6, корпус 1, этаж 3, помещение XXII</p>
+				</div>
+				<div>
+					<a href="#" class="transparent_pill">Заказать набор</a>
+				</div>
+			</div>
+		</div>
 	</header>
+
+	<div class="menu_bg"></div>
+
+	<button class="respmenubtn">
+		<span></span>
+		<span></span>
+		<span></span>
+	</button>
 
 	<!-- /Header -->
 
@@ -63,18 +72,29 @@
 				<div class="promo_descript">
 					<h1>SPA набор для домашнего «селфи-обертывания»</h1>
 					<p>Уменьшает объемы, увлажняет и подтягивает кожу уже после первой процедуры</p>
-					<a href="#" class="green_pill">Хочу попробовать</a>
+					<div class="novisible_767">
+						<a href="#" class="green_pill">Хочу попробовать</a>
+					</div>
 				</div>
 				<div class="items_wrapp">
-					<div class="item">
-						<p>Всего 25 минут</p>
+					<div>
+						<div class="item">
+							<p>Всего 25 минут</p>
+						</div>
 					</div>
-					<div class="item">
-						<p>До -8см за 1 процедуру</p>
+					<div>
+						<div class="item">
+							<p>До -8см за 1 процедуру</p>
+						</div>
 					</div>
-					<div class="item">
-						<p>100% натуральный состав</p>
+					<div>
+						<div class="item">
+							<p>100% натуральный состав</p>
+						</div>
 					</div>
+				</div>
+				<div class="btn_resp">
+					<a href="#" class="green_pill">Хочу попробовать</a>
 				</div>
 			</div>
 		</section>
@@ -90,8 +110,8 @@
 				</div>
 				<div class="thumbnails_1">
 					<div class="thumb_1">
-						<div class="img_box">
-							<img src="img/photo_01.png" alt="" />
+						<div class="img_box" style="background-image: url('img/photo_01.png')">
+							<!-- <img src="img/photo_01.png" alt="" /> -->
 						</div>
 						<div class="thumb_title">
 							<h3>Водорослево-минеральный пилинг</h3>
@@ -101,8 +121,8 @@
 						</div>
 					</div>
 					<div class="thumb_1">
-						<div class="img_box">
-							<img src="img/photo_02.png" alt="" />
+						<div class="img_box" style="background-image: url('img/photo_02.png')">
+							<!-- <img src="img/photo_02.png" alt="" /> -->
 						</div>
 						<div class="thumb_title">
 							<h3>Гель для обёртывания</h3>
@@ -112,8 +132,8 @@
 						</div>
 					</div>
 					<div class="thumb_1">
-						<div class="img_box">
-							<img src="img/photo_03.png" alt="" />
+						<div class="img_box" style="background-image: url('img/photo_03.png')">
+							<!-- <img src="img/photo_03.png" alt="" /> -->
 						</div>
 						<div class="thumb_title">
 							<h3>Липолитическая сыворотка</h3>
@@ -123,8 +143,8 @@
 						</div>
 					</div>
 					<div class="thumb_1">
-						<div class="img_box">
-							<img src="img/photo_04.png" alt="" />
+						<div class="img_box" style="background-image: url('img/photo_04.png')">
+							<!-- <img src="img/photo_04.png" alt="" /> -->
 						</div>
 						<div class="thumb_title">
 							<h3>Костюм для обёртывания</h3>
@@ -287,40 +307,45 @@
 			<div class="slider_wrapp">
 				<div class="slider">
 					<div class="slide_wrapp">
-						<div class="slide">
+						<div class="slide" style="background-image: url('img/slide_1.jpg')">
 							<div class="slide_descript">
 								<p>Ссылка на пост 1 https://www.instagram.com/p/CB0xvKlBCoD/</p>
 							</div>
-							<img src="img/slide_1.jpg" alt="" />
+							<!-- <img src="img/slide_1.jpg" alt="" /> -->
 						</div>
 					</div>
 					<div class="slide_wrapp">
-						<div class="slide">
+						<div class="slide" style="background-image: url('img/slide_2.jpg')">
 							<div class="slide_descript">
 								<p>Ссылка на пост 2 https://www.instagram.com/p/CB0xvKlBCoD/</p>
 							</div>
-							<img src="img/slide_2.jpg" alt="" />
+							<!-- <img src="img/slide_2.jpg" alt="" /> -->
 						</div>
 					</div>
 					<div class="slide_wrapp">
-						<div class="slide">
+						<div class="slide" style="background-image: url('img/slide_3.jpg')">
 							<div class="slide_descript">
 								<p>Ссылка на пост 3 https://www.instagram.com/p/CB0xvKlBCoD/</p>
 							</div>
-							<img src="img/slide_3.jpg" alt="" />
+							<!-- <img src="img/slide_3.jpg" alt="" /> -->
 						</div>
 					</div>
 					<div class="slide_wrapp">
-						<div class="slide">
+						<div class="slide" style="background-image: url('img/slide_4.jpg')">
 							<div class="slide_descript">
 								<p>Ссылка на пост 4 https://www.instagram.com/p/CB0xvKlBCoD/</p>
 							</div>
-							<img src="img/slide_4.jpg" alt="" />
+							<!-- <img src="img/slide_4.jpg" alt="" /> -->
 						</div>
 					</div>
 				</div>
-				<div class="slider_descript">
-					<p>Ссылка на пост https://www.instagram.com/p/CB0xvKlBCoD/</p>
+				<div class="row">
+					<div class="append_arrows"></div>
+				</div>
+				<div class="row">
+					<div class="slider_descript">
+						<p>Ссылка на пост https://www.instagram.com/p/CB0xvKlBCoD/</p>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -416,31 +441,33 @@
 		<!-- Section 9 -->
 
 		<section class="sect_9">
-			<div class="contacts_wrapp">
-				<div class="contacts_wrapp_header">
-					<h3>Хочешь быть в тонусе и иметь здоровое и упругое тело?</h3>
-					<p>Успей купить набор для домашнего ухода по выгодной цене!</p>
+			<div class="row">
+				<div class="contacts_wrapp">
+					<div class="contacts_wrapp_header">
+						<h3>Хочешь быть в тонусе и иметь здоровое и упругое тело?</h3>
+						<p>Успей купить набор для домашнего ухода по выгодной цене!</p>
+					</div>
+					<form>
+						<div class="form_2_wrapp">
+							<div>
+								<div class="input_box_2">
+									<input type="text" placeholder="Имя" name="name" />
+								</div>
+							</div>
+							<div>
+								<div class="input_box_2">
+									<input type="tel" placeholder="Телефон" name="name" />
+								</div>
+							</div>
+							<div>
+								<button type="submit" class="green_pill green_pill_4">Заказать</button>
+							</div>
+						</div>
+						<div class="form_footer">
+							<p>Заполняя данную форму, вы соглашаетесь с политикой конфиденциальности компании.</p>
+						</div>
+					</form>
 				</div>
-				<form>
-					<div class="form_2_wrapp">
-						<div>
-							<div class="input_box_2">
-								<input type="text" placeholder="Имя" name="name" />
-							</div>
-						</div>
-						<div>
-							<div class="input_box_2">
-								<input type="tel" placeholder="Телефон" name="name" />
-							</div>
-						</div>
-						<div>
-							<button type="submit" class="green_pill green_pill_4">Заказать</button>
-						</div>
-					</div>
-					<div class="form_footer">
-						<p>Заполняя данную форму, вы соглашаетесь с политикой конфиденциальности компании.</p>
-					</div>
-				</form>
 			</div>
 		</section>
 

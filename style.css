@@ -5,42 +5,6 @@
 /*------------------*/
 
 @font-face {
-    font-family: "Gotham";
-    src: url("fonts/Gotham-Thin.eot");
-    src: url("fonts/Gotham-Thin.eot?#iefix") format("embedded-opentype"),
-        url("fonts/Gotham-Thin.woff2") format("woff2"),
-        url("fonts/Gotham-Thin.woff") format("woff"),
-        url("fonts/Gotham-Thin.ttf") format("truetype"),
-        url("fonts/Gotham-Thin.svg#fonts/Gotham-Thin") format("svg");
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: "Gotham";
-    src: url("fonts/Gotham-Light.eot");
-    src: url("fonts/Gotham-Light.eot?#iefix") format("embedded-opentype"),
-        url("fonts/Gotham-Light.woff2") format("woff2"),
-        url("fonts/Gotham-Light.woff") format("woff"),
-        url("fonts/Gotham-Light.ttf") format("truetype"),
-        url("fonts/Gotham-Light.svg#fonts/Gotham-Light") format("svg");
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: "Gotham";
-    src: url("fonts/Gotham-Book.eot");
-    src: url("fonts/Gotham-Book.eot?#iefix") format("embedded-opentype"),
-        url("fonts/Gotham-Book.woff2") format("woff2"),
-        url("fonts/Gotham-Book.woff") format("woff"),
-        url("fonts/Gotham-Book.ttf") format("truetype"),
-        url("fonts/Gotham-Book.svg#fonts/Gotham-Book") format("svg");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
     font-family: "Roboto Condensed";
     src: url("fonts/RobotoCondensed-Bold.eot");
     src: url("fonts/RobotoCondensed-Bold.eot?#iefix") format("embedded-opentype"),
@@ -119,6 +83,7 @@ body {
     -ms-flex-direction: column;
     min-height: 100%;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 header {
@@ -339,12 +304,35 @@ textarea:focus {
     margin-top: -20px;
     width: 40px;
     height: 40px;
-    /*background: rgb(232,232,232);*/
-    background: red;
+    background: rgb(232,232,232);
     border: 1px solid transparent;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
+    opacity: .8;
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: opacity;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: opacity;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: opacity;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: opacity;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.slick-arrow:hover {
+    opacity: 1;
 }
 
 .slick-arrow img {
@@ -361,10 +349,12 @@ textarea:focus {
 
 .slick-prev {
     left: 21px;
+    transform: rotate(-180deg);
 }
 
 .slick-prev img {
-    left: -2px;
+    height: 20px;
+    left: 3px;
 }
 
 .slick-next {
@@ -372,7 +362,8 @@ textarea:focus {
 }
 
 .slick-next img {
-    right: -6px;
+    height: 20px;
+    right: -4px;
 }
 
 .slick-dots {
@@ -484,10 +475,6 @@ textarea:focus {
     max-width: 100%;
 }
 
-.main_nav_wrapp {
-
-}
-
 .main_nav {
     display: flex;
     display: -webkit-flex;
@@ -501,7 +488,7 @@ textarea:focus {
     color: #ffffff;
     font-size: 16px;
     font-weight: 400;
-    font-family: "Gotham";
+    font-family: "Roboto Condensed";
     opacity: 1;
     -webkit-transition-property: opacity;
     -webkit-transition-duration: .3s;
@@ -550,7 +537,7 @@ textarea:focus {
     margin: 2px 0;
     padding: 6px 30px;
     text-align: center;
-    font-family: "Gotham";
+    font-family: "Roboto Condensed";
     font-size: 14px;
     font-weight: 300;
     -webkit-transition-property: background, border-color;
@@ -611,7 +598,7 @@ textarea:focus {
     display: block;
     width: 27px;
     height: 2px;
-    background: #466896;
+    background: #fff;
     margin: 0 auto 7px auto;
     -webkit-transition-property: transform, border, background;
     -webkit-transition-duration: .3s;
@@ -644,7 +631,7 @@ textarea:focus {
 }
 
 .respmenubtn:hover span {
-    background: #e9ba5f;
+    background: #fff;
 }
 
 .respmenubtn.active span {
@@ -652,7 +639,7 @@ textarea:focus {
     width: 35px;
     top: 2px;
     left: 0;
-    background: #e9ba5f;
+    background: #fff;
 }
 
 .respmenubtn.active span:last-child {
@@ -678,6 +665,45 @@ textarea:focus {
 }
 
 /* ----- / Responsive Menu Button ------ */
+
+.menu_bg {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -110%;
+    background: rgba(0, 0, 0, .5);
+    z-index: 4;
+    opacity: 0;
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: opacity;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: opacity;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: opacity;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: opacity;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.menu_bg.visible {
+    opacity: 1;
+    left: 0;
+}
+
+.resp_header_footer {
+    display: none;
+}
 
 /*-------------------------------------------*/
 /* ----- CONTENT ------ */
@@ -803,7 +829,14 @@ textarea:focus {
     margin: 78px 0 43px 0;
 }
 
+.items_wrapp > div {
+    display: inline-block;
+    vertical-align: top;
+}
+
 .item {
+    display: inline-block;
+    vertical-align: top;
     position: relative;
     padding-left: 38px;
 }
@@ -834,6 +867,10 @@ textarea:focus {
 
 }
 
+.btn_resp {
+    display: none;
+}
+
 /*-- /Section 1 --*/
 
 /*-- Section 2 --*/
@@ -858,6 +895,8 @@ textarea:focus {
 .thumb_1 .img_box {
     height: 312px;
     overflow: hidden;
+    background-size: cover;
+    background-position: center;
 }
 
 .thumb_1 .img_box img {
@@ -872,7 +911,7 @@ textarea:focus {
 }
 
 .thumb_1 .thumb_title {
-    height: 79px;
+    min-height: 79px;
     margin: 19px 0 0 0;
 }
 
@@ -910,6 +949,7 @@ textarea:focus {
 /*-- Section 3 --*/
 
 .sect_3 {
+    overflow: hidden;
     padding-top: 28px;
 }
 
@@ -1211,6 +1251,8 @@ textarea:focus {
     height: 550px;
     overflow: hidden;
     position: relative;
+    background-size: cover;
+    background-position: center;
 }
 
 .slide_descript {
@@ -1253,8 +1295,25 @@ textarea:focus {
     opacity: 1;
 }
 
+.append_arrows {
+    max-width: 760px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.append_arrows .slick-prev {
+    margin-top: -300px;
+    left: -109px;
+}
+
+.append_arrows .slick-next {
+    margin-top: -300px;
+    right: -109px;
+}
+
 .slider_descript {
-    width: 760px;
+    width: 100%;
+    max-width: 760px;
     border-top: 1px solid #eee;
     margin: 18px auto;
     padding: 18px 0;
@@ -1290,7 +1349,8 @@ textarea:focus {
 .form_article .left img {
     display: block;
     width: auto;
-    max-width: auto;
+    height: auto;
+    max-width: 100%;
 }
 
 .form_article_descript {
@@ -1536,7 +1596,7 @@ textarea:focus {
     font-weight: 300;
 }
 
-.descript {
+.article_best .descript {
     width: 100%;
     max-width: 580px;
 }
@@ -1665,6 +1725,8 @@ footer {
 .footer_templ {
     display: flex;
     display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
 }
 
 .footer_templ > div {
