@@ -597,9 +597,12 @@ textarea:focus {
 .respmenubtn span {
     display: block;
     width: 27px;
-    height: 2px;
-    background: #fff;
-    margin: 0 auto 7px auto;
+    height: 3px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background: #e2e2e2;
+    margin: 0 auto 6px auto;
     -webkit-transition-property: transform, border, background;
     -webkit-transition-duration: .3s;
     -webkit-transition-timing-function: ease;
@@ -631,15 +634,15 @@ textarea:focus {
 }
 
 .respmenubtn:hover span {
-    background: #fff;
+    background: #e2e2e2;
 }
 
 .respmenubtn.active span {
     position: relative;
     width: 35px;
-    top: 2px;
-    left: 0;
-    background: #fff;
+    top: 1px;
+    left: 1px;
+    background: #e2e2e2;
 }
 
 .respmenubtn.active span:last-child {
