@@ -2109,3 +2109,50 @@ footer {
     top: 3px;
     right: 3px;
 }
+
+/*-- Section 1 - Thanks --*/
+
+.thanks {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    min-height: 100vh!important;
+    background-image: url(img/contacts_bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.thanks > .row {
+    width: 100%;
+}
+
+.thanks_content {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+}
+
+.thanks_content .left {
+    width: 45%;
+}
+
+.thanks_content .right {
+    width: 55%;
+    padding-left: 20px;
+}
+
+.thanks_content .right img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+.thanks_content .promo_descript {
+    margin-top: 80px;
+    max-width: 100%;
+}
+
+/*-- /Section 1 - Thanks --*/

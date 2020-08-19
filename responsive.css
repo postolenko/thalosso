@@ -488,6 +488,33 @@
 
 	/*-- /Section 9 --*/
 
+	/*-- Section 1 - Thanks --*/
+
+	.thanks_content {
+		display: block;
+	}
+
+	.thanks_content .left {
+	    width: 100%;
+	    padding: 20px 0;
+	}
+
+	.thanks_content .right {
+	    width: 100%;
+	    padding: 20px 0;
+	}
+
+	.thanks_content .right img {
+		max-height: 200px;
+		margin: 0 auto;
+	}
+
+	.thanks_content .promo_descript {
+	    margin-top: 25px;
+	}
+
+	/*-- /Section 1 - Thanks --*/
+
 }
 
 @media only screen and (max-width: 740px) {
