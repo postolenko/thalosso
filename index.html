@@ -378,28 +378,28 @@
 								<div class="input_wrapp">
 									<h4>Ваше имя</h4>
 									<div class="input_box">
-										<input type="text" placeholder="Введите ваше имя" name="" />
+										<input type="text" placeholder="Введите ваше имя" name="name"/>
 									</div>
 								</div>
 								<div class="input_wrapp">
 									<h4>Ваш телефон</h4>
 									<div class="input_box">
-										<input type="text" placeholder="Введите ваш телефон" name="" />
+										<input type="tel" placeholder="Введите ваш телефон" name="" required />
 									</div>
 								</div>
 								<div class="input_wrapp">
 									<h4>Выберите набор</h4>
 									<div class="radios">
 										<div class="radio_wrapp">
-											<label class="radio"><input type="radio" name="radio"><span>Набор на 3 процедуры (Цена 2490₽ вместо 3735₽)</span></label>
+											<label class="radio"><input type="radio" name="radio" required><span>Набор на 3 процедуры (Цена 2490₽ вместо 3735₽)</span></label>
 										</div>
 										<div class="radio_wrapp">
-											<label class="radio"><input type="radio" name="radio"><span>Набор на 10 процедур (Цена 4 990 ₽ вместо 7 485 ₽)</span></label>
+											<label class="radio"><input type="radio" name="radio" required><span>Набор на 10 процедур (Цена 4 990 ₽ вместо 7 485 ₽)</span></label>
 										</div>
 									</div>
 								</div>
 								<div class="submit_wrapp">
-									<button type="submit" class="green_pill green_pill_3">Заказать набор</button>
+									<button type="submit" id="submit" class="green_pill green_pill_3">Заказать набор</button>
 								</div>
 							</form>
 						</div>
@@ -416,7 +416,7 @@
 			<div class="row">
 				<div class="article_best">
 					<div class="left">
-						<div class="sertificates animate leftSlice">
+						<div class="sertificates animate fadeInUp">
 							<img src="img/l_3.png" alt="" class="l_s_1" />
 							<img src="img/l_3.png" alt="" class="l_s_2" />
 							<img src="img/l_3.png" alt="" class="l_s_3" />
@@ -451,12 +451,12 @@
 						<div class="form_2_wrapp">
 							<div>
 								<div class="input_box_2">
-									<input type="text" placeholder="Имя" name="name" />
+									<input type="text" placeholder="Имя" name="name" required />
 								</div>
 							</div>
 							<div>
 								<div class="input_box_2">
-									<input type="tel" placeholder="Телефон" name="name" />
+									<input type="tel" placeholder="Телефон" name="name" required />
 								</div>
 							</div>
 							<div>

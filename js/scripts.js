@@ -137,6 +137,38 @@ $(document).ready(function() {
         $(".respmenubtn").removeClass("active");
     });
 
+    // ---------
+
+    var this_form, name, tel, error;
+
+    $("#submit").on("click", function (event) {
+        event.preventDefault();
+        error = 0;
+        this_form = $(this).closest("form");
+        this_form.find('input, textarea').removeClass('error');
+        if(this_form.find('input').is('input[name="name"]')) {
+            name = this_form.find('input[name="name"]');
+            if(typeof name.attr('required') != typeof undefined) {
+                if(name.val().length<=2) {
+                    name.addClass('error');
+                    error = 1;
+                }
+            }
+        }
+        if(this_form.find('input').is('input[name="tel"]')) {
+            tel = this_form.find('input[name="tel"]');
+            if(typeof tel.attr('required') != typeof undefined) {
+                if(tel.val().length<=2) {
+                    tel.addClass('error');
+                    error = 1;
+                }
+            }
+        }
+        if(error==1) {
+            return false;
+        }
+    });
+
 });
 
 
