@@ -251,22 +251,6 @@ a:active {
     -webkit-tap-highlight-color: transparent;
 }
 
-input {
-
-}
-
-input:focus {
-
-}
-
-textarea {
-
-}
-
-textarea:focus {
-
-}
-
 /*-------------------------------------------*/
 /* ----- REUSABLE COMPONENTS ------ */
 /*-------------------------------------------*/
@@ -867,10 +851,6 @@ textarea:focus {
     font-weight: 400;
 }
 
-.items_wrapp .item {
-
-}
-
 .btn_resp {
     display: none;
 }
@@ -944,10 +924,6 @@ textarea:focus {
     text-align: center;
 }
 
-.button_wrapp_2 .green_pill {
-    
-}
-
 /*-- /Section 2 --*/
 
 /*-- Section 3 --*/
@@ -1013,10 +989,6 @@ textarea:focus {
 
 .thumb_2_descript .thumb_title {
     min-height: 59px;
-}
-
-.thumb_2_descript p {
-
 }
 
 .l_1 {
@@ -1179,10 +1151,6 @@ textarea:focus {
 /*-- /Section 4 --*/
 
 /*-- Section 5 --*/
-
-.sect_5 {
-
-}
 
 .thumbnails_3 {
     display: flex;
@@ -1368,10 +1336,6 @@ textarea:focus {
     font-family: 'Roboto Condensed',Arial,sans-serif;
     line-height: 1.55;
     font-weight: 500;
-}
-
-.form_article_descript ul {
-
 }
 
 .form_article_descript ul li {
@@ -1713,8 +1677,6 @@ input.error {
     border-radius: 28px;
 }
 
-
-
 /*-- /Section 9 --*/
 
 /*-------------------------------------------*/
@@ -1770,10 +1732,6 @@ footer {
     font-family: 'Roboto Condensed',Arial,sans-serif;
     line-height: 1.55;
     font-weight: 600;
-}
-
-.social_wrapp {
-
 }
 
 .socials_list {
@@ -1871,10 +1829,6 @@ footer {
     line-height: 1.55;
     font-weight: 400;
     opacity: .4;
-}
-
-.links_wrapp {
-
 }
 
 .links_wrapp p {
