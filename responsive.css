@@ -334,7 +334,7 @@
 	/*-- Section 1 --*/
 
 	.promo {
-	    background-attachment: none;
+	    background-attachment: scroll;
 	}
 
 	.promo_descript {
