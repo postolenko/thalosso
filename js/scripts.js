@@ -145,12 +145,14 @@ $(document).ready(function() {
         event.preventDefault();
         error = 0;
         this_form = $(this).closest("form");
-        this_form.find('input, textarea').removeClass('error');
+        this_form.find('.input_box').removeClass('error');
+        this_form.find(".radios").removeClass('error');
+        $(".error_box").fadeOut(300);
         if(this_form.find('input').is('input[name="name"]')) {
             name = this_form.find('input[name="name"]');
             if(typeof name.attr('required') != typeof undefined) {
                 if(name.val().length<=2) {
-                    name.addClass('error');
+                    name.closest(".input_box").addClass('error');
                     error = 1;
                 }
             }
@@ -159,14 +161,60 @@ $(document).ready(function() {
             tel = this_form.find('input[name="tel"]');
             if(typeof tel.attr('required') != typeof undefined) {
                 if(tel.val().length<=2) {
-                    tel.addClass('error');
+                    tel.closest(".input_box").addClass('error');
+                    error = 1;
+                }
+            }
+        }
+        if(this_form.find('input').is('input[name="radio"]')) {
+            radio = this_form.find('input[name="radio"]');
+            if(typeof radio.attr('required') != typeof undefined) {
+                if(!radio.is(":checked")) {
+                    radio.closest(".radios").addClass('error');
                     error = 1;
                 }
             }
         }
         if(error==1) {
-            return false;
+            $(".error_box").fadeIn(300);
+            return false;            
         }
+    });
+
+
+    $("#submit2").on("click", function (event) {
+        event.preventDefault();
+        error = 0;
+        this_form = $(this).closest("form");
+        this_form.find('.input_box_2').removeClass('error');
+        $(".error_box").fadeOut(300);
+        if(this_form.find('input').is('input[name="name2"]')) {
+            name = this_form.find('input[name="name2"]');
+            if(typeof name.attr('required') != typeof undefined) {
+                if(name.val().length<=2) {
+                    name.closest(".input_box_2").addClass('error');
+                    error = 1;
+                }
+            }
+        }
+        if(this_form.find('input').is('input[name="tel2"]')) {
+            tel = this_form.find('input[name="tel2"]');
+            if(typeof tel.attr('required') != typeof undefined) {
+                if(tel.val().length<=2) {
+                    tel.closest(".input_box_2").addClass('error');
+                    error = 1;
+                }
+            }
+        }
+        if(error==1) {
+            $(".error_box").fadeIn(300);
+            return false;            
+        }
+    });
+
+    $(".error_box .close_btn").on("click", function(event) {
+        event.preventDefault();
+        $(this).closest(".error_box").fadeOut(300);
     });
 
 });

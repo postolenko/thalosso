@@ -384,17 +384,17 @@
 								<div class="input_wrapp">
 									<h4>Ваш телефон</h4>
 									<div class="input_box">
-										<input type="tel" placeholder="Введите ваш телефон" name="" required />
+										<input type="tel" placeholder="Введите ваш телефон" name="tel" required />
 									</div>
 								</div>
 								<div class="input_wrapp">
 									<h4>Выберите набор</h4>
 									<div class="radios">
 										<div class="radio_wrapp">
-											<label class="radio"><input type="radio" name="radio" required><span>Набор на 3 процедуры (Цена 2490₽ вместо 3735₽)</span></label>
+											<label class="radio"><input type="radio" name="radio" required /><span>Набор на 3 процедуры (Цена 2490₽ вместо 3735₽)</span></label>
 										</div>
 										<div class="radio_wrapp">
-											<label class="radio"><input type="radio" name="radio" required><span>Набор на 10 процедур (Цена 4 990 ₽ вместо 7 485 ₽)</span></label>
+											<label class="radio"><input type="radio" name="radio" required /><span>Набор на 10 процедур (Цена 4 990 ₽ вместо 7 485 ₽)</span></label>
 										</div>
 									</div>
 								</div>
@@ -451,16 +451,16 @@
 						<div class="form_2_wrapp">
 							<div>
 								<div class="input_box_2">
-									<input type="text" placeholder="Имя" name="name" required />
+									<input type="text" placeholder="Имя" name="name2" />
 								</div>
 							</div>
 							<div>
 								<div class="input_box_2">
-									<input type="tel" placeholder="Телефон" name="name" required />
+									<input type="tel" placeholder="Телефон" name="tel2" required />
 								</div>
 							</div>
 							<div>
-								<button type="submit" class="green_pill green_pill_4">Заказать</button>
+								<button type="submit" id="submit2" class="green_pill green_pill_4">Заказать</button>
 							</div>
 						</div>
 						<div class="form_footer">
@@ -523,6 +523,11 @@
 		</footer>
 	<!-- /Footer -->
 
+	</div>
+
+	<div class="error_box">
+		<button type="button" class="close_btn"></button>
+		<p>Пожалуйста, заполните все обязательные поля</p>
 	</div>
 
 	<link rel="stylesheet" type="text/css" href="responsive.css">

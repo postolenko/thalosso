@@ -1425,8 +1425,24 @@ input.error {
     border: 1px solid red;
 }
 
+.input_box.error input {
+    border: 1px solid red;
+}
+
+.input_box_2.error input {
+    border: 1px solid red;
+}
+
+.radio_wrapp {
+    padding: 3px 0;
+}
+
 .radios {
     padding: 1px 0;
+}
+
+.radios.error {
+    outline: 1px solid red;
 }
 
 .radio {
@@ -2050,3 +2066,46 @@ footer {
 }
 
 /*-- /Animation --*/
+
+.error_box {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+    max-width: 400px;
+    min-width: 260px;
+    width: auto;
+    -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, .2);
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, .2);
+    border-radius: 3px;
+    text-align: left;
+    background: #F95D51;
+    padding: 15px 20px 15px 20px;
+}
+
+.close_btn {
+    display: block;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid transparent;
+    background-image: url(img/close.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.error_box p {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.error_box .close_btn {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+}
