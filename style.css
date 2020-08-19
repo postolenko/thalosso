@@ -673,7 +673,7 @@ textarea:focus {
     top: 0;
     left: -110%;
     background: rgba(0, 0, 0, .5);
-    z-index: 4;
+    z-index: 5;
     opacity: 0;
     -webkit-transition-property: opacity;
     -webkit-transition-duration: .3s;
