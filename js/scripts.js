@@ -60,7 +60,6 @@ $(document).ready(function() {
             appendArrows: $(".append_arrows"),
             prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><img src="img/left_arrow.svg"></button>',
             nextArrow: '<button class="slick-next" aria-label="Next" type="button"><img src="img/right_arrow.svg"></button>',
-            // fade: true,
             responsive: [
                 {
                   breakpoint: 600,
@@ -69,14 +68,7 @@ $(document).ready(function() {
                     slidesToShow: 1,
                     slidesToScroll: 1
                   }
-                },
-                // {
-                //   breakpoint: 540,
-                //   settings: {
-                //     slidesToShow: 1,
-                //     slidesToScroll: 1
-                //   }
-                // }
+                }
               ]
         });
     }
@@ -86,77 +78,56 @@ $(document).ready(function() {
     $(".respmenubtn").on("click", function(e) {
         e.preventDefault();
         if(!$("#header").hasClass("visible")) {
-            div = document.createElement('div');
-            div.style.overflowY = 'scroll';
-            div.style.width = '50px';
-            div.style.height = '50px';
-            div.style.visibility = 'hidden';
-            document.body.appendChild(div);
-            scrollWidth = div.offsetWidth - div.clientWidth;
-            document.body.removeChild(div);
-            $("body").addClass("fixed");
-            $("body").css({
-                "position" : "fixed",
-                "top" :  -$(document).scrollTop() + "px",
-                "overflow" : "hidden",
-                "right" : 0,
-                "left" : 0,
-                "bottom" : 0,
-                "padding-right" : scrollWidth + "px"
-            });
             $("#header").addClass("visible");
             $(this).addClass("active");
-            $(this).css({
-                "right" : scrollWidth + "px"
-            });
             $(".menu_bg").addClass("visible");
         } else {
-            curTop = $("body").css("top");
-            curTop = Math.abs(parseInt(curTop, 10));
-            $("body").attr("style", "");
-            if (curTop !== 0) {
-                $("html").scrollTop(curTop);
-            }
-            $("body").removeClass("fixed");
             $("#header").removeClass("visible");
             $(this).removeClass("active");
-            $(this).css({
-                "right" : "10px"
-            });
             $(".menu_bg").removeClass("visible");
         }
     });
     $(".menu_bg").on("click", function(e) {
         e.preventDefault();
-        curTop = $("body").css("top");
-        curTop = Math.abs(parseInt(curTop, 10));
-        $("body").attr("style", "");
-        if (curTop !== 0) {
-            $("html").scrollTop(curTop);
-        }
         $(this).removeClass("visible");
-        $("body").removeClass("fixed");
         $("#header").removeClass("visible");
         $(".respmenubtn").removeClass("active");
-        $(".respmenubtn").css({
-            "right" : "10px"
-        });
     });
     $(this).keydown(function(eventObject){
         if (eventObject.which == 27 ) {
-            curTop = $("body").css("top");
-            curTop = Math.abs(parseInt(curTop, 10));
-            $("body").attr("style", "");
-            if (curTop !== 0) {
-                $("html").scrollTop(curTop);
-            }
             $(".menu_bg").removeClass("visible");
-            $("body").removeClass("fixed");
             $("#header").removeClass("visible");
             $(".respmenubtn").removeClass("active");
-            $(".respmenubtn").css({
-                "right" : "10px"
-            });
         }
     });
+
+    // ------
+
+    $('.main_nav a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        var hrefAttr = $(this).attr("href");
+        if( hrefAttr.length > 0 && hrefAttr != "#" ) {
+            $('html, body').stop().animate({
+                'scrollTop': $(hrefAttr).offset().top+2
+            }, 500);
+        }
+        $(".menu_bg").removeClass("visible");
+        $("#header").removeClass("visible");
+        $(".respmenubtn").removeClass("active");
+    });
+
+    $('.toContacts').on('click', function (e) {
+        e.preventDefault();
+        $('html, body').stop().animate({
+            'scrollTop': $("#contacts").offset().top+2
+        }, 500);
+        $(".menu_bg").removeClass("visible");
+        $("#header").removeClass("visible");
+        $(".respmenubtn").removeClass("active");
+    });
+
 });
+
+
+
+
